@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "446626176929",
+    "firebase_url": "https://disciplinemaintanence.firebaseio.com",
+    "project_id": "disciplinemaintanence",
+    "storage_bucket": "disciplinemaintanence.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446626176929:android:0d125a85c1c75d98",
+        "android_client_info": {
+          "package_name": "com.seven.zion.studentattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446626176929-3v9q53c54h6maaqfp4mjfmbruborjoaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seven.zion.studentattendance",
+            "certificate_hash": "405b453ff636901ee3afec2fd483536fbaca124e"
+          }
+        },
+        {
+          "client_id": "446626176929-82aejlfl94v6kh68h898o26ootq1j9uk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKaZY6Z_Hjtv-NiwUxuqqJrPrzctGRH1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446626176929-82aejlfl94v6kh68h898o26ootq1j9uk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
