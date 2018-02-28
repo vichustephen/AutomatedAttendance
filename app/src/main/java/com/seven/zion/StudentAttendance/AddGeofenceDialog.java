@@ -6,6 +6,7 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -15,6 +16,8 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class AddGeofenceDialog extends DialogFragment {
 
+    Button okButton;
+    
     public interface geofenceDialog{
 
         public void addGeofence (LatLng latLng,String id,int radius);
