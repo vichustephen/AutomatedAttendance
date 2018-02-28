@@ -8,4 +8,12 @@
 
     <string name="action_settings">Settings</string>
     <string name="geofence_name">Geofence Name</string>
+    <string name="lattitude">Lattitude</string>
+    <string name="add_geofence">Add Geofence</string>
+    <string name="longtitude">Longtitude</string>
+    <string name="radius">Radius</string>
+    <string name="ok">OK</string>
+    <string name="lattitudeLabel">Lattitude :</string>
+    <string name="longtitudeLabel">Longtitude :</string>
+    <string name="geofence_dialog_note">Note : The Lattitude and Lontitude value is retrieved from the touch position.You can also modify them to set the geo-fence midpoint more accurately</string>
 </resources>

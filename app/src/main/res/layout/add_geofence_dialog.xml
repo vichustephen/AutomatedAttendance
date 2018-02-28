@@ -1,52 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
+        android:id="@+id/geoLabel"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="Add Geofence"
+        android:text="@string/add_geofence"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold" />
 
     <EditText
+        android:layout_below="@+id/geoLabel"
         android:id="@+id/gname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/geofence_name"
         android:inputType="text" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/gname"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/latlabel"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/lattitudeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp" />
     <EditText
         android:id="@+id/lat"
+        android:layout_below="@+id/latlabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Lattitude"
+        android:hint="@string/lattitude"
         android:inputType="numberDecimal" />
 
+    <TextView
+        android:layout_below="@+id/lat"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/longLabel"
+        android:textSize="12sp"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longtitudeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp" />
     <EditText
         android:id="@+id/lang"
+        android:layout_below="@+id/longLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Longtitude"
+        android:hint="@string/longtitude"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/radius"
+        android:layout_below="@+id/lang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Radius"
+        android:hint="@string/radius"
         android:inputType="number" />
 
     <Button
         android:id="@+id/okbutton"
+        android:layout_below="@+id/radius"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OK" />
+        android:text="@string/ok" />
 
-</LinearLayout>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/okbutton"
+        android:layout_width="match_parent"
+        android:id="@+id/note"
+        android:layout_height="wrap_content"
+        android:text="@string/geofence_dialog_note"/>
+
+</RelativeLayout>

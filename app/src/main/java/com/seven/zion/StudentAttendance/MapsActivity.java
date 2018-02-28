@@ -43,6 +43,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
+                                                     ,AddGeofenceDialog.geofenceDialog
                                                      ,GoogleApiClient.ConnectionCallbacks
                                                      ,GoogleApiClient.OnConnectionFailedListener
                                                      ,ResultCallback<Status>
@@ -178,12 +179,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onConnected(@Nullable Bundle bundle) {
 
         LatLng latLng = new LatLng(9.962709, 78.107144);
-        Geofence myGeofence = CreateGeoFence(latLng, 70,150," 1");
+       // Geofence myGeofence = CreateGeoFence(latLng, 70,150," 1");
         Geofence geofence = CreateGeoFence(latLng,30,100,"2");
-        geofenceList.add(myGeofence);
+       // geofenceList.add(myGeofence);
         geofenceList.add(geofence);
-        GeofencingRequest request = GeoFenceRequest();
-        addGeofence(request);
+
     }
 
     @Override
@@ -221,7 +221,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (fragment !=null)
             fragmentManager.beginTransaction().remove(fragment).commit();
         AddGeofenceDialog geofenceDialog = new AddGeofenceDialog();
+        Bundle data = new Bundle();
+        data.putDouble("Lat",latLng.latitude);
+        data.putDouble("Long",latLng.longitude);
+        geofenceDialog.setArguments(data);
         geofenceDialog.show(fragmentManager,"ADD GEO-FENCE");
 
+    }
+
+    @Override
+    public void addGeofence(LatLng latLng, String id, int radius) {
+
+        Toast.makeText(this,id,Toast.LENGTH_LONG).show();
+        Geofence geofence = CreateGeoFence(latLng,radius,120,id);
+        geofenceList.add(geofence);
+        GeofencingRequest request = GeoFenceRequest();
+        addGeofence(request);
     }
 }
