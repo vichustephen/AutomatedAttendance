@@ -15,19 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity
-            android:name="com.seven.zion.StudentAttendance.MapsActivity">
+        <activity android:name=".MapsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.seven.zion.StudentAttendance.LoginActivity">
-
-        </activity>
+        <activity android:name=".LoginActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -41,11 +36,16 @@
             android:value="@string/google_maps_key" />
 
         <service
-            android:name="com.seven.zion.StudentAttendance.GeoFenceTransitionService"
+            android:name=".GeoFenceTransitionService"
             android:exported="false">
 
         </service>
+        <service
+            android:name=".BackgroundService"
+            android:enabled="true"
+            android:exported="true">
 
+        </service>
     </application>
 
 </manifest>
